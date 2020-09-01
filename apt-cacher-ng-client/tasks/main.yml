@@ -1,0 +1,17 @@
+---
+
+- name: apt.conf.d
+  become: yes
+  lineinfile:
+    create: yes
+    path: /etc/apt/apt.conf.d/00proxy
+    regexp: '^Acquire'
+    line: 'Acquire::http::Proxy \"http://{{ apt_cacher_ng_ip }}:3142\";'
+
+- name: Test ip
+  debug:
+    var: apt_cacher_ng_ip
+
+#- name: Test cache ip Works
+  #debug:
+    #var: "hostvars['apt-cache-ng']['ansible_default_ipv4']['address']"

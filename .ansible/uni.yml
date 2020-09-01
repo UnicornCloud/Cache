@@ -3,3 +3,8 @@
 - hosts: cache
   roles:
   - apt-cacher-ng
+
+
+- hosts: cache_client
+  roles:
+  - apt-cacher-ng-client

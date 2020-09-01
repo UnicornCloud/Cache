@@ -1,0 +1,2 @@
+apt_cacher_ng_ip: "{{ hostvars['apt-cache-ng']['ansible_default_ipv4']['address'] }}"
+

@@ -1,0 +1,36 @@
+---
+# https://fabianlee.org/2018/02/11/ubuntu-a-centralized-apt-package-cache-using-apt-cacher-ng/
+
+- name: Install
+  become: yes
+  apt:
+    name: apt-cacher-ng
+    state: present
+
+- name: open port
+  become: yes
+  ufw:
+    rule: allow
+    port: '3142'
+    proto: tcp
+
+- name: setting
+  become: yes
+  lineinfile:
+    path: /etc/apt-cacher-ng/acng.conf
+    regexp: '^PassThroughPattern'
+    line: 'PassThroughPattern: .*'
+
+- name: log
+  become: yes
+  lineinfile:
+    path: /etc/apt-cacher-ng/acng.conf
+    regexp: '^VerboseLog 2'
+    line: 'VerboseLog: 2'
+
+- name: debug
+  become: yes
+  lineinfile:
+    path: /etc/apt-cacher-ng/acng.conf
+    regexp: '^Debug'
+    line: 'Debug: 5'

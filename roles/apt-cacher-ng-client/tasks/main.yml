@@ -6,7 +6,7 @@
     create: yes
     path: /etc/apt/apt.conf.d/00proxy
     regexp: '^Acquire'
-    line: 'Acquire::http::Proxy \"http://{{ apt_cacher_ng_ip }}:3142\";'
+    line: 'Acquire::http::Proxy "http://{{ apt_cacher_ng_ip }}:3142";'
   notify:
   - update cache
 

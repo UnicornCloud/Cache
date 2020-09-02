@@ -13,6 +13,7 @@
     rule: allow
     port: '3142'
     proto: tcp
+  when: "'in_docker' not in group_names"
 
 - name: setting
   become: yes

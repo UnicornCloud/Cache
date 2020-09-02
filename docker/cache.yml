@@ -1,0 +1,5 @@
+---
+
+- hosts: cache
+  roles:
+  - apt-cacher-ng

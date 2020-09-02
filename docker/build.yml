@@ -1,0 +1,33 @@
+---
+# Uses host networking! so build_host is same as "cache" host
+- hosts: cache
+  gather_facts: no
+  tasks:
+
+    - name: copy hosts
+      copy:
+        src: ../hosts
+        dest: /home/me/.uni/Cache/docker/
+        owner: me
+        group: me
+        mode: '0644'
+
+    - name: copy Roles
+      copy:
+        src: ../roles
+        dest: /home/me/.uni/Cache/docker/
+        owner: me
+        group: me
+        mode: '0644'
+
+    - name: build container image
+      docker_image:
+        name: apt-cacher-ng
+        build:
+          path: /home/me/.uni/Cache/docker
+          pull: yes
+        source: build
+        force_source: yes
+        state: present
+
+# from: www.redhat.com/sysadmin/container-images-ansible

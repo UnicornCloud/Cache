@@ -10,3 +10,8 @@ https://www.google.com/search?q=ansible+get+ip+address+of+another+host
 https://blog.networktocode.com/post/Accessing-other-host-variables-in-Ansible/
 
 https://stackoverflow.com/questions/44389666/get-a-particular-host-names-ip-with-ansible
+
+# Docker
+https://www.ansible.com/integrations/containers/docker
+https://github.com/ansible-community/ansible-bender
+https://github.com/containers/buildah

@@ -1,9 +1,8 @@
 ---
 
-- hosts: cache
-  roles:
-  - apt-cacher-ng
-
+# - hosts: apt_cacher
+#   roles:
+#   - apt-cacher-ng
 
 - hosts: cache_client
   roles:

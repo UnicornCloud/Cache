@@ -1,0 +1,9 @@
+#!/usr/bin/bash
+
+ansible-playbook -i ../hosts build.yml
+
+#docker image prune
+
+alt(){
+docker build --tag apt-cacher-ng .
+}

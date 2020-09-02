@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+
+docker run --name apt-cacher-ng --rm --network host -i -t apt-cacher-ng bash

@@ -1,0 +1,5 @@
+[cache_in_docker]
+localhost
+
+[cache_in_docker:vars]
+ansible_connection=local

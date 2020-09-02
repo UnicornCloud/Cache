@@ -1,8 +1,0 @@
-[in_docker]
-localhost
-
-[in_docker:vars]
-ansible_connection=local
-
-[cache:children]
-in_docker

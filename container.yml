@@ -1,0 +1,18 @@
+---
+- hosts: cache
+  gather_facts: no
+  tasks:
+
+  - name: Run apt-cacher container
+    docker_container:
+      name: apt-cacher-ng
+      image: apt-cacher-ng
+      detach: yes
+      state: started
+      # recreate: yes
+      published_ports: "3142:3142"
+      volumes:
+        - "testvol:/var/cache/apt-cacher-ng"
+
+# docs.docker.com/storage/volumes/
+# docs.ansible.com/ansible/latest/modules/docker_container_module.html

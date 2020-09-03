@@ -1,9 +1,16 @@
 ---
 
-# - hosts: apt_cacher
+# - hosts: cache_in_docker
 #   roles:
 #   - apt-cacher-ng
 
+- hosts: cache
+  roles:
+  - net
+
 - hosts: cache_client
+  vars:
+    # override
+    apt_cacher_ng_ip: '10.42.0.1'
   roles:
   - apt-cacher-ng-client

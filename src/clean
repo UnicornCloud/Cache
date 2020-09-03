@@ -1,0 +1,9 @@
+#!/usr/bin/bash
+
+docker stop apt-cacher-ng
+
+docker container prune --force
+
+docker image prune --force
+
+docker volume prune --force

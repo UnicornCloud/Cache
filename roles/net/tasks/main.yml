@@ -1,0 +1,4 @@
+
+- debug:
+    msg:
+    - "Running a play against [cache] is required to make [client] lookup it's ip!"

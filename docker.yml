@@ -1,5 +1,4 @@
 ---
-# Uses host networking! so build_host is same as "cache" host
 - hosts: cache
   gather_facts: no
   tasks:

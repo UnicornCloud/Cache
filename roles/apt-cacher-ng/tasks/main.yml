@@ -13,7 +13,7 @@
     rule: allow
     port: '3142'
     proto: tcp
-  when: "'in_docker' not in group_names"
+  when: "'cache_in_docker' not in group_names"
 
 - name: setting
   become: yes
@@ -35,3 +35,9 @@
     path: /etc/apt-cacher-ng/acng.conf
     regexp: '^Debug'
     line: 'Debug: 5'
+
+- name: testing
+  become: yes
+  apt:
+    name: tree
+    state: present

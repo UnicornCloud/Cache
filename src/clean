@@ -1,8 +1,11 @@
 #!/usr/bin/bash
 
+# Order matters!
 docker stop apt-cacher-ng
 
 docker container prune --force
+
+docker rmi apt-cacher-ng
 
 docker image prune --force
 

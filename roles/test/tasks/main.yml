@@ -1,0 +1,6 @@
+- name: Install testing packages
+  apt:
+    pkg:
+    - tree
+    - net-tools
+    - iputils-ping

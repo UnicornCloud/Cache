@@ -35,9 +35,3 @@
     path: /etc/apt-cacher-ng/acng.conf
     regexp: '^Debug'
     line: 'Debug: 5'
-
-- name: testing
-  become: yes
-  apt:
-    name: tree
-    state: present

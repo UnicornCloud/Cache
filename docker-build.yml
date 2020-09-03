@@ -24,7 +24,7 @@
         name: apt-cacher-ng
         build:
           path: /home/me/.uni/Cache/docker
-          pull: yes
+          pull: no
         source: build
         force_source: yes
         state: present

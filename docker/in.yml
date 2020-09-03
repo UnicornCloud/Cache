@@ -3,3 +3,4 @@
 - hosts: cache_in_docker
   roles:
   - apt-cacher-ng
+  - test

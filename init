@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
-ansible-playbook -i hosts docker.yml
+ansible-playbook docker-build.yml
 
-alt(){
-docker build --tag apt-cacher-ng .
-}
+ansible-playbook container.yml
+
+ansible-playbook client.yml

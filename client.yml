@@ -1,9 +1,5 @@
 ---
 
-# - hosts: cache_in_docker
-#   roles:
-#   - apt-cacher-ng
-
 - hosts: cache
   roles:
   - net

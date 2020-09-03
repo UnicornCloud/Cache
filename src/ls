@@ -2,3 +2,4 @@
 
 docker ps -a
 docker volume ls
+docker system df

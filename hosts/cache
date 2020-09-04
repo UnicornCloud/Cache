@@ -3,14 +3,15 @@ apt-cache-ng  ansible_host=10.42.0.1
 
 [cache:vars]
 ansible_become_password=u
-
+ansible_user=me
 
 [cache_client]
-192.168.2.120
+#192.168.2.143
+192.168.122.250
 
 [cache_client:vars]
 ansible_become_password=u
-
+ansible_user=me
 
 [cache_in_docker]
 localhost

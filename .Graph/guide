@@ -1,0 +1,14 @@
+# guide:
+https://www.serverlab.ca/tutorials/linux/administration-linux/how-to-set-the-proxy-for-apt-for-ubuntu-18-04/ 
+
+
+# Multiple
+[sch:](https://www.google.com/search?q=apt+acquire+multiple+proxy)
+
+## relation:
+auto-apt-proxy
+
+# ProxyAutoDetect
+https://askubuntu.com/questions/53443/how-do-i-ignore-a-proxy-if-not-available
+
+https://gist.github.com/silviuvulcan/07103fd18b5441b2f7db

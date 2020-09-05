@@ -1,0 +1,33 @@
+discuss:
+https://bugs.launchpad.net/ubuntu/+source/apt/+bug/1656352
+
+Todo:
+[Proxy-Auto-Detect should handle smoothly multiple proxy URL](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=763296)
+
+# docs:
+http://manpages.ubuntu.com/manpages/bionic/man1/apt-transport-http.1.html
+
+section:
+" Proxy Configuration
+       The environment variable http_proxy is supported for system wide configuration. Proxies
+       specific to APT can be configured via the option Acquire::http::Proxy. Proxies which
+       should be used only for certain hosts can be specified via Acquire::http::Proxy::host.
+       Even more finegrained control can be achieved via proxy autodetection, detailed further
+       below."
+
+section:
+"   Automatic Proxy Configuration
+       Acquire::http::Proxy-Auto-Detect can be used to specify an external command to discover
+       the HTTP proxy to use. The first and only parameter is a URI denoting the host to be
+       contacted, to allow for host-specific configuration. APT expects the command to output the
+       proxy on stdout as a single line in the previously specified URI format or the word DIRECT
+       if no proxy should be used. No output indicates that the generic proxy settings should be
+       used.
+
+       Note that auto-detection will not be used for a host if a host-specific proxy
+       configuration is already set via Acquire::http::Proxy::host.
+
+       See the squid-deb-proxy-client(1) and auto-apt-proxy(1) packages for example
+       implementations.
+
+       This option takes precedence over the legacy option name Acquire::http::ProxyAutoDetect."

@@ -10,6 +10,17 @@
   notify:
   - update cache
 
+- name: apt.conf.d alt localhost
+  become: yes
+  lineinfile:
+    create: yes
+    path: /etc/apt/apt.conf.d/00proxy
+    regexp: '^Acquire'
+    line: 'Acquire::http::Proxy "http://0.0.0.0:3142";'
+  notify:
+  - update cache
+
+
 - name: Test ip
   debug:
     var: apt_cacher_ng_ip

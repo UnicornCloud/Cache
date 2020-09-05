@@ -9,4 +9,4 @@
     # override
     apt_cacher_ng_ip: '10.42.0.1'
   roles:
-  - apt-cacher-ng-client
+  - apt-client

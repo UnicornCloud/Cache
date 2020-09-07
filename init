@@ -1,7 +1,0 @@
-#!/usr/bin/bash
-
-ansible-playbook docker-build.yml
-
-ansible-playbook container.yml
-
-ansible-playbook client.yml

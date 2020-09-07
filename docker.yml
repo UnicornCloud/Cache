@@ -6,7 +6,7 @@
     - name: copy hosts
       copy:
         src: ./hosts
-        dest: /home/me/.uni/Cache/.docker/
+        dest: /home/me/.uni/Cache/docker/
         owner: me
         group: me
         mode: '0644'
@@ -14,7 +14,7 @@
     - name: copy Roles
       copy:
         src: ./roles
-        dest: /home/me/.uni/Cache/.docker/
+        dest: /home/me/.uni/Cache/docker/
         owner: me
         group: me
         mode: '0644'
@@ -23,7 +23,7 @@
       docker_image:
         name: apt-cacher-ng
         build:
-          path: /home/me/.uni/Cache/.docker
+          path: /home/me/.uni/Cache/docker
           pull: no
         source: build
         force_source: yes

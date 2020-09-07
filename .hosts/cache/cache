@@ -1,0 +1,9 @@
+[cache:children]
+local
+#master   #use if you want a separate, always-on instance, on your network!
+
+[in_docker]
+localhost
+
+[in_docker:vars]
+ansible_connection=local

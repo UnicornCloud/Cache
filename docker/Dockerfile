@@ -9,7 +9,7 @@ COPY in.yml /uni/
 COPY hosts/cache /etc/ansible/hosts
 
 WORKDIR /uni
-RUN ansible-playbook in.yml
+RUN ansible-playbook build.yml
 
 #Test
 #RUN ansible -m ping apt_cacher

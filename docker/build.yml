@@ -1,6 +1,6 @@
 ---
 
-- hosts: cache_in_docker
+- hosts: in_docker
   roles:
   - apt-cacher-ng
   - test

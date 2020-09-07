@@ -1,0 +1,14 @@
+---
+
+- name: apt.conf.d
+  become: yes
+  blockinfile:
+    path: /etc/apt/apt.conf.d/00proxy
+    block: |
+      {{proxyline}} "http://{{ apt_cacher_ng_ip }}:3142";
+      {{proxyline}} "http://0.0.0.0:3142";
+      {{proxyline}} "http://{{libvirt_host}}:3142";
+
+- name: Test ip
+  debug:
+    var: apt_cacher_ng_ip

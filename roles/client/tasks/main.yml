@@ -1,0 +1,19 @@
+---
+- name: Remove old config
+  file:
+    path: /etc/apt/apt.conf.d/00proxy
+    state: absent
+
+- name: apt.conf.d
+  become: yes
+  lineinfile:
+    create: yes
+    path: /etc/apt/apt.conf.d/00proxy
+    regexp: '{{ apt_cacher_ng_ip }}'
+    line: '{{proxyline}} "http://{{ apt_cacher_ng_ip }}:3142";'
+  notify:
+  - update cache
+
+- name: Test ip
+  debug:
+    var: apt_cacher_ng_ip

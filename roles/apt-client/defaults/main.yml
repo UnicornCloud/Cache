@@ -1,6 +1,0 @@
-apt_cacher_ng_ip: "{{ hostvars['apt-cache-ng']['ansible_default_ipv4']['address'] }}"
-libvirt_host: '192.168.122.1'
-
-proxyline: "Acquire::http::Proxy-Auto-Detect"
-# doc: manpages.ubuntu.com/manpages/bionic/man1/apt-transport-http.1.html
-old_proxyline: "Acquire::http::Proxy"

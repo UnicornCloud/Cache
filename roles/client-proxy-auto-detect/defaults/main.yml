@@ -1,0 +1,2 @@
+proxyline: "Acquire::http::Proxy-Auto-Detect"
+# doc: manpages.ubuntu.com/manpages/bionic/man1/apt-transport-http.1.html

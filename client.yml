@@ -2,11 +2,9 @@
 
 - hosts: cache
   roles:
-  - net
+  - detect
 
 - hosts: cache_client
   vars:
-    # override
-    apt_cacher_ng_ip: '10.42.0.1'
   roles:
-  - apt-client
+  - client

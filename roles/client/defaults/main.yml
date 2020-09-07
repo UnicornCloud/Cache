@@ -1,0 +1,7 @@
+proxyline: "Acquire::http::Proxy"
+
+apt_cacher_ng_ip: "{{ hostvars['apt-cache-ng']['ansible_default_ipv4']['address'] }}"
+libvirt_host: '192.168.122.1'
+
+# override:
+apt_cacher_ng_ip: '0.0.0.0'

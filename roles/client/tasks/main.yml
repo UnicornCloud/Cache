@@ -1,9 +1,4 @@
 ---
-- name: Remove old config
-  file:
-    path: /etc/apt/apt.conf.d/00proxy
-    state: absent
-
 - name: apt.conf.d
   become: yes
   lineinfile:

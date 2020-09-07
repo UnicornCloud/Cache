@@ -1,3 +1,9 @@
 - hosts: cache
   roles:
-  - start-on-boot 
+  - start-on-boot
+
+- hosts: cache_client
+  vars:
+  roles:
+  # - clean
+  - client

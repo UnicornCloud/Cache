@@ -5,7 +5,7 @@
 
     - name: copy hosts
       copy:
-        src: ./hosts
+        src: ./.hosts
         dest: /home/me/.uni/Cache/docker/
         owner: me
         group: me

@@ -4,6 +4,4 @@ ln -srf .hosts/cache /etc/ansible/hosts/
 
 ansible-playbook docker.yml
 
-ansible-playbook client.yml
-
 ansible-playbook uni.yml
